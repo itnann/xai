@@ -251,19 +251,18 @@ At the same time, the project emphasizes that **performance metrics alone are no
 ### SHAP Analysis
 Kernel SHAP provides both:
 - **global explanations** to show overall feature importance
-- **local explanations** to show why a specific prediction was made
+  <img width="416" height="189" alt="image" src="https://github.com/user-attachments/assets/0b6eec24-d9c9-4f8f-9439-cb8c29155e38" />
 
-Suggested figures to add:
-- SHAP summary plot
-- SHAP bar plot
-- local explanation plot for a sample prediction
+- **local explanations** to show why a specific prediction was made
+<img width="415" height="206" alt="image" src="https://github.com/user-attachments/assets/4bbe1523-850b-4ae2-b665-d01a93646192" />
+
 
 ### Counterfactual Explanations
 DiCE produces alternative instances that show what needs to change for the model to predict a different outcome.
 
-Suggested examples to add:
-- one or two counterfactual tables
-- interpretation of actionable variable changes
+(Figure 4: Humanity Change)
+
+(Figure 4: Cloud3pm Change)
 
 ---
 
