@@ -243,7 +243,8 @@ At the same time, the project emphasizes that **performance metrics alone are no
 
 ### Example Result Table
 
-![SHAP Summary](./figures/result_table.png)
+<img width="416" height="165" alt="image" src="https://github.com/user-attachments/assets/70bc8d90-7d2e-4fc3-8938-fb92cc537fb1" />
+
 
 ---
 
@@ -253,18 +254,15 @@ At the same time, the project emphasizes that **performance metrics alone are no
 Kernel SHAP provides both:
 - **global explanations** to show overall feature importance
 - **local explanations** to show why a specific prediction was made
+<img width="807" height="401" alt="image" src="https://github.com/user-attachments/assets/98887b27-fd75-47d0-9b04-269c19922494" />
 
-Suggested figures to add:
-- SHAP summary plot
-- SHAP bar plot
-- local explanation plot for a sample prediction
+<img width="810" height="444" alt="image" src="https://github.com/user-attachments/assets/33814d31-3ebc-493f-9df3-5e1bea04e940" />
 
 ### Counterfactual Explanations
 DiCE produces alternative instances that show what needs to change for the model to predict a different outcome.
+<img width="789" height="541" alt="image" src="https://github.com/user-attachments/assets/e9ade042-7f61-4bbe-b851-6eb626720a9c" />
 
-Suggested examples to add:
-- one or two counterfactual tables
-- interpretation of actionable variable changes
+
 
 ---
 
@@ -279,31 +277,6 @@ Suggested examples to add:
 ```
 
 > Update this section based on your actual repository structure.
-
----
-
-## Suggested Figures
-
-You can make the repository much stronger by adding screenshots or exported figures such as:
-
-- SHAP summary plot
-- SHAP feature importance bar chart
-- sample counterfactual explanation table
-- model performance comparison chart
-
-Example layout:
-
-```markdown
-## Sample Outputs
-
-### SHAP Summary Plot
-![SHAP Summary](./figures/shap_summary.png)
-
-### Counterfactual
-![Uploading image.png…]()
-
-
-```
 
 ---
 
