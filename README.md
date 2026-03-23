@@ -275,9 +275,6 @@ DiCE produces alternative instances that show what needs to change for the model
 ├── figures
 └── related project files
 ```
-
-> Update this section based on your actual repository structure.
-
 ---
 
 ## How to Run
@@ -307,8 +304,6 @@ Run the project notebooks/scripts in the order of:
 3. performance evaluation
 4. SHAP analysis
 5. DiCE counterfactual generation
-
-> Update this section with the exact filenames in your repository for reproducibility.
 
 ---
 
