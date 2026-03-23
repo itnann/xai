@@ -239,13 +239,10 @@ The report indicates that the model achieved **reasonable predictive performance
 
 At the same time, the project emphasizes that **performance metrics alone are not sufficient**, because they do not explain how predictions are produced.
 
-> Replace this section with your final metric values or screenshots from your notebook outputs.
+### Result Table
 
-### Example Result Table
+<img width="416" height="165" alt="image" src="https://github.com/user-attachments/assets/90b6dac8-1050-4a84-b0d3-bf6880f24209" />
 
-| Model | Accuracy | Precision | Recall | F1-score |
-|------|------:|------:|------:|------:|
-| XGBoost | XX.XX | XX.XX | XX.XX | XX.XX |
 
 ---
 
