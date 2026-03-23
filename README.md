@@ -239,10 +239,11 @@ The report indicates that the model achieved **reasonable predictive performance
 
 At the same time, the project emphasizes that **performance metrics alone are not sufficient**, because they do not explain how predictions are produced.
 
-### Result Table
+> Replace this section with your final metric values or screenshots from your notebook outputs.
 
-<img width="416" height="165" alt="image" src="https://github.com/user-attachments/assets/90b6dac8-1050-4a84-b0d3-bf6880f24209" />
+### Example Result Table
 
+![SHAP Summary](./figures/result_table.png)
 
 ---
 
@@ -251,18 +252,19 @@ At the same time, the project emphasizes that **performance metrics alone are no
 ### SHAP Analysis
 Kernel SHAP provides both:
 - **global explanations** to show overall feature importance
-  <img width="416" height="189" alt="image" src="https://github.com/user-attachments/assets/0b6eec24-d9c9-4f8f-9439-cb8c29155e38" />
-
 - **local explanations** to show why a specific prediction was made
-<img width="415" height="206" alt="image" src="https://github.com/user-attachments/assets/4bbe1523-850b-4ae2-b665-d01a93646192" />
 
+Suggested figures to add:
+- SHAP summary plot
+- SHAP bar plot
+- local explanation plot for a sample prediction
 
 ### Counterfactual Explanations
 DiCE produces alternative instances that show what needs to change for the model to predict a different outcome.
 
-(Figure 4: Humanity Change)
-
-(Figure 4: Cloud3pm Change)
+Suggested examples to add:
+- one or two counterfactual tables
+- interpretation of actionable variable changes
 
 ---
 
@@ -297,8 +299,10 @@ Example layout:
 ### SHAP Summary Plot
 ![SHAP Summary](./figures/shap_summary.png)
 
-### Counterfactual Example
-![Counterfactual Example](./figures/counterfactual_example.png)
+### Counterfactual
+![Uploading image.png…]()
+
+
 ```
 
 ---
