@@ -1,8 +1,24 @@
 # Enhancing Transparency in Rainfall Prediction with Explainable Artificial Intelligence
 
-This project investigates how **Explainable Artificial Intelligence (XAI)** can improve the transparency, trustworthiness, and practical usefulness of a **rainfall prediction system**. The system is built on the **Rain in Australia** dataset and uses an **XGBoost classifier** for binary prediction of whether it will rain the next day.
+<p align="center">
+  <b>An interpretable rainfall prediction project using XGBoost, Kernel SHAP, and DiCE</b>
+</p>
 
-To make the model more understandable, the project applies two post-hoc, model-agnostic explanation methods:
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/XGBoost-Model-EC6B23?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Explainable%20AI-XAI-6A5ACD?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/SHAP-Kernel%20SHAP-0F766E?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/DiCE-Counterfactuals-2563EB?style=for-the-badge" />
+</p>
+
+---
+
+## Overview
+
+This project investigates how **Explainable Artificial Intelligence (XAI)** can improve the transparency, trustworthiness, and practical usefulness of a **rainfall prediction system**.
+
+The predictive model is built on the **Rain in Australia** dataset and uses an **XGBoost classifier** to predict whether it will rain the next day. To make the model more understandable, the project applies two post-hoc, model-agnostic explanation methods:
 
 - **Kernel SHAP** for feature importance analysis
 - **DiCE** for counterfactual explanations
@@ -11,16 +27,18 @@ The project is designed to show not only **how well** the model predicts rainfal
 
 ---
 
-## Overview
+## Why This Project Matters
 
-In real-world forecasting tasks, predictive accuracy alone is often not enough. Users also need to understand the reasoning behind a model’s output. This is especially important in rainfall prediction, where forecasts can influence:
+In real-world forecasting tasks, predictive accuracy alone is not enough. Users also need to understand the reasoning behind a model’s output.
+
+This is especially important in rainfall prediction, where forecasts can influence:
 
 - agricultural planning
 - water resource management
 - infrastructure preparation
 - disaster response
 
-This project demonstrates how XAI techniques can support different stakeholders by making a black-box model more transparent and actionable.
+By combining **XGBoost** with **XAI methods**, this project aims to bridge the gap between **predictive performance** and **real-world usability**.
 
 ---
 
@@ -40,28 +58,28 @@ This project addresses that challenge by combining **XGBoost** with **Kernel SHA
 
 This project considers several stakeholder groups:
 
-- **Meteorologists and environmental analysts**  
-  Need technically meaningful explanations to verify whether the model relies on scientifically reasonable features.
+### 1. Meteorologists and Environmental Analysts
+Need technically meaningful explanations to verify whether the model relies on scientifically reasonable features.
 
-- **Government agencies**  
-  Need trustworthy predictions for infrastructure planning and emergency response.
+### 2. Government Agencies
+Need trustworthy predictions for infrastructure planning, emergency response, and public safety decisions.
 
-- **Farmers and agricultural planners**  
-  Need understandable, actionable insights to support crop and irrigation decisions.
+### 3. Farmers and Agricultural Planners
+Need understandable and actionable insights to support crop management, irrigation planning, and risk preparation.
 
-- **General public**  
-  Need transparency and reliability to trust automated rainfall forecasting systems.
+### 4. General Public
+Need transparency and reliability to trust automated rainfall forecasting systems.
 
-To address these different needs, the project adopts a stakeholder-oriented XAI strategy.
+To address these different needs, the project adopts a **stakeholder-oriented XAI strategy**.
 
 ---
 
 ## XAI Strategy
 
-Two complementary explanation methods are used:
+Two complementary explanation methods are used in this project.
 
 ### 1. Kernel SHAP
-Kernel SHAP is used mainly for **feature importance analysis**.
+Kernel SHAP is mainly used for **feature importance analysis**.
 
 It helps answer questions such as:
 - Which meteorological variables are most important?
@@ -77,7 +95,7 @@ It helps answer questions such as:
 - What small changes in the input could reverse the prediction?
 - Which conditions are most actionable for decision-making?
 
-This is particularly valuable for non-technical users and planners, because it expresses explanations as “what-if” scenarios.
+This is particularly valuable for non-technical users and planners, because it expresses explanations as intuitive “what-if” scenarios.
 
 ---
 
@@ -125,94 +143,41 @@ However, XGBoost is not inherently interpretable, which makes it a strong candid
 
 ## Explainability Methods
 
-## 1. Kernel SHAP
+### 1. Kernel SHAP
 
 Kernel SHAP is a **post-hoc, model-agnostic** explanation method based on **Shapley values** from game theory.
 
-### Classification
+#### Classification
 - **Scope:** Local and Global
 - **Timing:** Post-hoc
 - **Model Dependency:** Model-agnostic
 
-### Purpose in This Project
+#### Purpose in This Project
 Kernel SHAP is used to:
 - explain global feature importance
 - interpret individual predictions
 - validate whether the model relies on meaningful meteorological variables
 
-### Key Finding
+#### Key Finding
 The results show that **humidity-related variables** and **pressure indicators** are among the most influential features in rainfall prediction, which is consistent with domain knowledge.
 
----
-
-## 2. DiCE Counterfactual Explanations
+### 2. DiCE Counterfactual Explanations
 
 DiCE is a **post-hoc, model-agnostic** method for generating **diverse counterfactual explanations**.
 
-### Classification
+#### Classification
 - **Scope:** Local
 - **Timing:** Post-hoc
 - **Model Dependency:** Model-agnostic
 
-### Purpose in This Project
+#### Purpose in This Project
 DiCE is used to:
 - generate alternative scenarios
 - show how small changes in input variables can change the prediction
 - provide actionable explanations for users and decision-makers
 
-### Key Finding
+#### Key Finding
 Counterfactual examples show that changes in variables such as **humidity** and **Cloud3pm** can reverse the predicted rainfall outcome.
-
----
-
-## Model Performance
-
-The XGBoost model was evaluated using standard binary classification metrics:
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-
-The report indicates that the model achieved **reasonable predictive performance** on unseen test data, showing that it can learn meaningful patterns from the selected meteorological features.
-
-At the same time, the project emphasizes that **performance metrics alone are not sufficient**, because they do not explain how predictions are produced.
-
----
-
-## Key Insights
-
-### Why Explainability Matters
-In rainfall prediction, explainability improves:
-
-- **transparency**
-- **trust**
-- **accountability**
-- **decision support**
-
-### Why Kernel SHAP and DiCE Work Well Together
-These two methods offer complementary perspectives:
-
-- **Kernel SHAP** explains **which features matter** and **how much**
-- **DiCE** explains **what needs to change** to obtain a different outcome
-
-Together, they support both:
-- technical understanding
-- practical decision-making
-
----
-
-## Repository Structure
-
-```text
-.
-├── README.md
-├── notebooks / scripts
-├── figures
-└── related project files
-```
-
-You can update this section based on your actual repository structure.
 
 ---
 
@@ -261,6 +226,119 @@ Interpretation for stakeholders
 
 ---
 
+## Model Performance
+
+The XGBoost model was evaluated using standard binary classification metrics:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+The report indicates that the model achieved **reasonable predictive performance** on unseen test data, showing that it can learn meaningful patterns from the selected meteorological features.
+
+At the same time, the project emphasizes that **performance metrics alone are not sufficient**, because they do not explain how predictions are produced.
+
+> Replace this section with your final metric values or screenshots from your notebook outputs.
+
+### Example Result Table
+
+| Model | Accuracy | Precision | Recall | F1-score |
+|------|------:|------:|------:|------:|
+| XGBoost | XX.XX | XX.XX | XX.XX | XX.XX |
+
+---
+
+## Explanation Outputs
+
+### SHAP Analysis
+Kernel SHAP provides both:
+- **global explanations** to show overall feature importance
+- **local explanations** to show why a specific prediction was made
+
+Suggested figures to add:
+- SHAP summary plot
+- SHAP bar plot
+- local explanation plot for a sample prediction
+
+### Counterfactual Explanations
+DiCE produces alternative instances that show what needs to change for the model to predict a different outcome.
+
+Suggested examples to add:
+- one or two counterfactual tables
+- interpretation of actionable variable changes
+
+---
+
+## Repository Structure
+
+```text
+.
+├── README.md
+├── notebooks / scripts
+├── figures
+└── related project files
+```
+
+> Update this section based on your actual repository structure.
+
+---
+
+## Suggested Figures
+
+You can make the repository much stronger by adding screenshots or exported figures such as:
+
+- SHAP summary plot
+- SHAP feature importance bar chart
+- sample counterfactual explanation table
+- model performance comparison chart
+
+Example layout:
+
+```markdown
+## Sample Outputs
+
+### SHAP Summary Plot
+![SHAP Summary](./figures/shap_summary.png)
+
+### Counterfactual Example
+![Counterfactual Example](./figures/counterfactual_example.png)
+```
+
+---
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/itnann/xai.git
+cd xai
+```
+
+### 2. Install dependencies
+
+```bash
+pip install xgboost pandas numpy scikit-learn shap dice-ml matplotlib jupyter
+```
+
+### 3. Prepare the dataset
+
+Download the **Rain in Australia** dataset and place it in the expected local directory.
+
+### 4. Run the notebook or scripts
+
+Run the project notebooks/scripts in the order of:
+1. data preprocessing
+2. model training
+3. performance evaluation
+4. SHAP analysis
+5. DiCE counterfactual generation
+
+> Update this section with the exact filenames in your repository for reproducibility.
+
+---
+
 ## Potential Impact
 
 Applying XAI in this system provides several important benefits:
@@ -293,7 +371,7 @@ Applying XAI in this system provides several important benefits:
 
 ---
 
-## Why This Project Matters
+## Why This Project Matters for My Portfolio
 
 This project demonstrates practical experience in:
 
@@ -316,8 +394,14 @@ It is a strong portfolio project for roles related to:
 
 ## Author Contribution
 
-**Tian Zhennan**  
-Contributed to the XAI-based rainfall prediction project, including dataset preprocessing, model building, explainability analysis, and report preparation.
+**Tian Zhennan**
+
+Contributed to the XAI-based rainfall prediction project, including:
+- dataset preprocessing
+- model building
+- explainability analysis
+- result interpretation
+- report preparation
 
 ---
 
