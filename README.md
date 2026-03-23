@@ -239,9 +239,8 @@ The report indicates that the model achieved **reasonable predictive performance
 
 At the same time, the project emphasizes that **performance metrics alone are not sufficient**, because they do not explain how predictions are produced.
 
-> Replace this section with your final metric values or screenshots from your notebook outputs.
 
-### Example Result Table
+### Result Table
 
 <img width="416" height="165" alt="image" src="https://github.com/user-attachments/assets/70bc8d90-7d2e-4fc3-8938-fb92cc537fb1" />
 
